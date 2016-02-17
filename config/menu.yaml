@@ -1,0 +1,41 @@
+button:
+ -
+  name: "我要"
+  sub_button:
+   -
+    type: "scancode_waitmsg"
+    name: "绑定用餐二维码"
+    key: "BINDING_QR_CODE"
+    sub_button:
+     -
+   -
+    type: "click"
+    name: "预订午餐"
+    key:  "BOOK_LUNCH"
+    sub_button:
+     -
+   -
+    type: "click"
+    name: "预订晚餐"
+    key:  "BOOK_DINNER"
+    sub_button:
+     -
+ -
+  name: "查询"
+  sub_button:
+   -
+    type: "click"
+    name: "进出记录"
+    key:  "BADGE_IN_OUT"
+    sub_button:
+     -
+   -
+    type: "click"
+    name: "年假余额"
+    key:  "ANNUAL_LEAVE"
+    sub_button:
+     -
+ -
+  type: "view"
+  name: "关于"
+  url:  "http://blog.cloud-mes.com/"

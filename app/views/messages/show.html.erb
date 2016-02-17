@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Openid:</strong>
+  <%= @message.openid %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @message.event %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @message.content %>
+</p>
+
+<p>
+  <strong>Raw xml:</strong>
+  <%= @message.raw_xml %>
+</p>
+
+<%= link_to 'Back', messages_path %>

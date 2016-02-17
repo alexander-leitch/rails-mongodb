@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'telegrammer'
+bot = Telegrammer::Bot.new("110515929:AAG2I9nvv-piRBcPYhh8iXj6mHdT5WzwV08")
+# Setting the webhook
+response = bot.set_webhook("https://agile-oasis-2482.herokuapp.com/telegram")
+puts response.inspect
+# <Telegrammer::ApiResponse:0x007ff4b9a73658 @body="{\"ok\":true,\"result\":true,\"description\":\"Webhook was set\"}", @success=true, @result=true>

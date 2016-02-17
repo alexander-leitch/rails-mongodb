@@ -1,0 +1,29 @@
+  <ul class="menu">
+    <li class="left">
+      <%= link_to('Posts', posts_path) %>        
+    </li>
+    <li class="left">
+      <%= link_to('Products', products_path) %>        
+    </li>
+    <li class="left">
+      <%= link_to('Messages', messages_path) %>        
+    </li>
+    <% if user_signed_in? %>
+      <li class="right">
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+      </li>
+      <li class="right">
+        <%= link_to('Edit registration', edit_user_registration_path) %>
+      </li>
+      <li class="right">
+        
+      </li>
+    <% else %>
+      <li class="right">
+        <%= link_to('Login', new_user_session_path)  %>  
+      </li>
+      <li class="right">
+        <%= link_to('Register', new_user_registration_path)  %>  
+      </li>
+    <% end %>
+  </ul>

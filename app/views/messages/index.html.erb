@@ -1,0 +1,25 @@
+<h1>Incoming WeChat Text Messages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Openid</th>
+      <th>Event</th>
+      <th>Content</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.openid %></td>
+        <td><%= message.event %></td>
+        <td><%= message.content %></td>
+        <td><%= link_to 'Show', message %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @messages %>
