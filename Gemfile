@@ -58,7 +58,7 @@ gem 'has_scope'
 
 gem 'htmlentities'
 
-gem 'activesupport-json_encoder', github: 'rails/activesupport-json_encoder'
+gem 'activesupport-json_encoder', github: 'rails/activesupport-json_encoder', branch: 'master'
 
 # Image manipulation
 gem 'rmagick', :require => 'rmagick'
@@ -68,7 +68,7 @@ gem 'jquery-fileupload-rails'
 gem 'jcrop-rails-v2'
 
 # Testing creating a Gem
-gem 'dogeify', :git => 'git://github.com/alexander-leitch/dogeify.git'
+gem 'dogeify', github: 'alexander-leitch/dogeify', branch: 'master'
 
 gem 'cowsay'
 
@@ -79,7 +79,7 @@ gem 'twitter'
 
 gem 'ruby-gmail'
 
-gem 'bitcoin-ruby', git: 'https://github.com/lian/bitcoin-ruby', branch: 'master', require: 'bitcoin'
+gem 'bitcoin-ruby', github: 'alexander-leitch/bitcoin-ruby', branch: 'master', require: 'bitcoin' # lian/bitcoin-ruby
 
 gem 'activesupport'
 gem 'wechat' # Requires ActiveSupport
@@ -122,6 +122,8 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem 'aws-sdk'
 
 #gem 'scout_apm'
+
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,7 +1,7 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.mailer_sender = 'alex@swipeinteractive.co.za'
+  config.mailer_sender = 'alex@openstyle.co.za.co.za'
   require 'devise/orm/mongoid'
   config.case_insensitive_keys = [ :email ]
   config.strip_whitespace_keys = [ :email ]
