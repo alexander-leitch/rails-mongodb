@@ -61,7 +61,7 @@ gem 'htmlentities'
 gem 'activesupport-json_encoder', github: 'rails/activesupport-json_encoder', branch: 'master'
 
 # Image manipulation
-gem 'rmagick', :require => 'rmagick'
+# gem 'rmagick', :require => 'rmagick'
 #gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 gem 'jquery-ui-rails'
 gem 'jquery-fileupload-rails'
@@ -82,8 +82,9 @@ gem 'ruby-gmail'
 gem 'bitcoin-ruby', github: 'alexander-leitch/bitcoin-ruby', branch: 'master', require: 'bitcoin' # lian/bitcoin-ruby
 
 gem 'activesupport'
-gem 'wechat' # Requires ActiveSupport
 
+gem 'wechat' # Requires ActiveSupport
+gem 'facebook-messenger'
 gem 'telegrammer'
 
 #gem 'email_verifier'
