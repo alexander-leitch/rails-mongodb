@@ -2,12 +2,13 @@ require 'rake'
 require 'telegrammer'
 
 namespace :telegram do
-  bot = Telegrammer::Bot.new("110515929:AAG58jgMlIEZ3dvT9erZ-Mgf3__Bq7E8OkY")
   task :set => :environment do |task, args|
+    bot = Telegrammer::Bot.new("110515929:AAG58jgMlIEZ3dvT9erZ-Mgf3__Bq7E8OkY")
     response = bot.set_webhook("https://agile-oasis-2482.herokuapp.com/telegram")
     puts response.inspect
   end
   task :clear => :environment do |task, args|
+    bot = Telegrammer::Bot.new("110515929:AAG58jgMlIEZ3dvT9erZ-Mgf3__Bq7E8OkY")
     response = bot.set_webhook("")
     puts response.inspect
   end

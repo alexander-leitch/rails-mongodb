@@ -33,5 +33,9 @@ module RailsMongodb
     
     config.active_job.queue_adapter = :delayed_job
     
+    # Auto-load /bot and its subdirectories
+    config.paths.add File.join("app", "bot"), glob: File.join("**","*.rb")
+    config.autoload_paths += Dir[Rails.root.join("app", "bot", "*")]
+    
   end
 end

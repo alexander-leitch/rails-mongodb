@@ -19,4 +19,6 @@ Rails.application.routes.draw do
     resources :posts
     resources :messages
   end
+  
+  mount Facebook::Messenger::Server, at: "bot"
 end
