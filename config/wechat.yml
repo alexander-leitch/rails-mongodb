@@ -1,14 +1,29 @@
 default: &default
-  appid: <%= ENV['WECHAT_APPID'] %>
-  secret: <%= ENV['WECHAT_APP_SECRET'] %>
-  token:   <%= ENV['WECHAT_TOKEN'] %>
+  corpid: "corpid"
+  corpsecret: "corpsecret"
+  agentid:  1
+# Or if using public account, only need above two line
+  appid:      wxa60f5abd5f4107fc
+  secret:     57960c4b67998e085f8ea77d6293f812
+  token:    "my_token"
+  access_token: "/Users/alexanderl/Sites/rails-mongodb/wechat_access_token"
+  encrypt_mode: false # if true must fill encoding_aes_key
+  encoding_aes_key:  "my_encoding_aes_key"
+
+production:
+  corpid:     <%= ENV['WECHAT_CORPID'] %>
+  corpsecret: <%= ENV['WECHAT_CORPSECRET'] %>
+  agentid:    <%= ENV['WECHAT_AGENTID'] %>
+# Or if using public account, only need above two line
+ # appid:      wxa60f5abd5f4107fc
+ # secret:     57960c4b67998e085f8ea77d6293f812
+  token:      <%= ENV['WECHAT_TOKEN'] %>
   access_token:  <%= ENV['WECHAT_ACCESS_TOKEN'] %>
+  encrypt_mode: false # if true must fill encoding_aes_key
+  encoding_aes_key:  <%= ENV['WECHAT_ENCODING_AES_KEY'] %>
 
-production: 
+development:
   <<: *default
 
-development: 
-  <<: *default
-
-test: 
+test:
   <<: *default

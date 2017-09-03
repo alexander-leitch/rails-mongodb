@@ -14,3 +14,4 @@
 .idea
 Rakefile
 .env
+.wechat_access_token

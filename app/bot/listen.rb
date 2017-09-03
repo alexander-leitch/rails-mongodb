@@ -4,7 +4,7 @@ require "facebook/messenger"
 
 include Facebook::Messenger
 
-Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
+# Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["ACCESS_TOKEN"])
 
 
 # Bot.on :message do |message|
@@ -31,14 +31,20 @@ Bot.on :message do |message|
   message.sent_at     # => 2016-04-22 21:30:36 +0200
   message.text        # => 'Hello, bot!'
   message.attachments # => [ { 'type' => 'image', 'payload' => { 'url' => 'https://www.example.com/1.jpg' } } ]
+  
+  message.mark_seen
+  message.typing_on
+  
   puts message.inspect
   Message.create({
-    :openid => message.sender[:id], 
+    :openid => message.sender['id'].to_s, 
     :raw_xml => message.to_json, 
     :content => message.text, 
     :event => 'messenger'
   }).save
-  message.mark_seen
+  message.reply(text: 'Hello, human!')
+  message.typing_off
+  
   # message.reply(text: 'Hello, human!')
   # message.reply(
   #   attachment: {
