@@ -5,7 +5,7 @@ default: &default
 # Or if using public account, only need above two line
   appid:      wxa60f5abd5f4107fc
   secret:     57960c4b67998e085f8ea77d6293f812
-  token:    "my_token"
+  token:    "openstyle"
   access_token: "/Users/alexanderl/Sites/rails-mongodb/wechat_access_token"
   encrypt_mode: false # if true must fill encoding_aes_key
   encoding_aes_key:  "my_encoding_aes_key"

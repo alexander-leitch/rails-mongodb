@@ -37,5 +37,7 @@ module RailsMongodb
     config.paths.add File.join("app", "bot"), glob: File.join("**","*.rb")
     config.autoload_paths += Dir[Rails.root.join("app", "bot", "*")]
     
+    config.web_console.whiny_requests = false
+    
   end
 end

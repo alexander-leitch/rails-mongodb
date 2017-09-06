@@ -3,7 +3,7 @@ class WechatsController < ApplicationController
 
   # default text responder when no other match
   on :text do |request, content|
-    Message.create({:openid => request[:touser].to_s, :raw_xml => request.to_json, :content => content, :event => 'wechat'}).save
+    # Message.create({:openid => request[:touser].to_s, :raw_xml => request.to_json, :content => content, :event => 'wechat'}).save
     request.reply.text "echo: #{content}" # Just echo
   end
 

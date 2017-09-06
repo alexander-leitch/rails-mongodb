@@ -3,17 +3,17 @@ require 'telegrammer'
 
 namespace :telegram do
   task :set => :environment do |task, args|
-    bot = Telegrammer::Bot.new("110515929:AAG58jgMlIEZ3dvT9erZ-Mgf3__Bq7E8OkY")
+    bot = Telegrammer::Bot.new("110515929:AAGg8C3vXhSimWGZB8OzF0E0la8Seff6bB4")
     response = bot.set_webhook("https://agile-oasis-2482.herokuapp.com/telegram")
     puts response.inspect
   end
   task :clear => :environment do |task, args|
-    bot = Telegrammer::Bot.new("110515929:AAG58jgMlIEZ3dvT9erZ-Mgf3__Bq7E8OkY")
+    bot = Telegrammer::Bot.new("110515929:AAGg8C3vXhSimWGZB8OzF0E0la8Seff6bB4")
     response = bot.set_webhook("")
     puts response.inspect
   end
   task :updater => :environment do |task, args|
-    bot = Telegrammer::Bot.new("110515929:AAG58jgMlIEZ3dvT9erZ-Mgf3__Bq7E8OkY")
+    bot = Telegrammer::Bot.new("110515929:AAGg8C3vXhSimWGZB8OzF0E0la8Seff6bB4")
     begin
       bot.set_webhook("")
       bot.get_updates do |message|
