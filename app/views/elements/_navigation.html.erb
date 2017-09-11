@@ -1,14 +1,11 @@
   <ul class="menu">
     <li class="left">
-      <%= link_to('Posts', posts_path) %>        
-    </li>
-    <li class="left">
-      <%= link_to('Products', products_path) %>        
-    </li>
-    <li class="left">
       <%= link_to('Messages', messages_path) %>        
     </li>
     <% if user_signed_in? %>
+      <li class="right">
+        <%= link_to('Admin', admin_messages_path) %>        
+      </li>
       <li class="right">
         <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
       </li>
